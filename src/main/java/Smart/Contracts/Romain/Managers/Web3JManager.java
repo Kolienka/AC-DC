@@ -1,4 +1,4 @@
-package Smart.Contracts.Romain.Managers;
+package Smart.Contracts.Romain.managers;
 
 import org.hyperledger.besu.ethereum.vm.OperationTracer;
 import org.web3j.abi.datatypes.Address;
@@ -30,16 +30,8 @@ public class Web3JManager {
         Web3j web3j = Web3j.build(new EmbeddedWeb3jService(configuration, operationTracer));
 
         //Test methode .send()
-        Regreeter testRegreeter = Regreeter.load(
-                        "0xcb0365cd172e1308ad995d5445234b1693b4e9c4",
-                        web3j,
-                        credentials,
-                        new DefaultGasProvider()
-        );
-        try {
-            testRegreeter.getGreeting().send();
-        }catch (Exception e){
-            System.out.println(e);
-        }
+        Regreeter regreeter =
+                Regreeter.deploy(web3j, credentials, new DefaultGasProvider(), "Hello!").send();
+
     }
 }

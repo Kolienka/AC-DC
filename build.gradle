@@ -40,13 +40,16 @@ dependencies {
      api 'org.apache.commons:commons-math3:3.6.1'
     implementation 'com.google.guava:guava:23.0'
     testImplementation 'junit:junit:4.12'
-    implementation "org.web3j:core:4.5.12"
-    implementation "org.web3j:web3j-evm:4.5.12"
+    implementation "org.web3j:core:4.7.0"
+    implementation "org.web3j:web3j-evm:4.7.0"
     compile 'org.web3j:core:3.3.0', 
             'ch.qos.logback:logback-core:1.2.3',
-            'ch.qos.logback:logback-classic:1.2.3'    
-    
+            'ch.qos.logback:logback-classic:1.2.3'
  }
+
+application {
+    mainClassName = "Smart.Contracts.Romain.Main"
+}
 
 run {
     standardInput = System.in

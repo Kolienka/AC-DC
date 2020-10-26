@@ -3,7 +3,7 @@
  */
 package Smart.Contracts.Romain;
 
-import Smart.Contracts.Romain.Managers.Web3JManager;
+import Smart.Contracts.Romain.managers.Web3JManager;
 
 public class Main {
     public static void main(String[] args){
