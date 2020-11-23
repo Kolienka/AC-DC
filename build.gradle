@@ -34,17 +34,15 @@ targetCompatibility = 11
 
 dependencies {
     // This dependency is used internally, and not exposed to consumers on their own compile classpath.
-    implementation 'com.google.guava:guava:28.2-jre'
     // Use JUnit test framework
-    testImplementation 'junit:junit:4.12'
-     api 'org.apache.commons:commons-math3:3.6.1'
     implementation 'com.google.guava:guava:23.0'
-    testImplementation 'junit:junit:4.12'
     implementation "org.web3j:core:4.7.0"
     implementation "org.web3j:web3j-evm:4.7.0"
-    compile 'org.web3j:core:3.3.0', 
-            'ch.qos.logback:logback-core:1.2.3',
-            'ch.qos.logback:logback-classic:1.2.3'
+    implementation "com.sparkjava:spark-core:2.9.3"
+    implementation "org.reflections:reflections:0.9.11"
+    implementation "com.google.code.gson:gson:2.8.6"
+    implementation "org.jooq:joor-java-8:0.9.13"
+    compile 'org.web3j:core:3.3.0'
  }
 
 application {
@@ -53,4 +51,14 @@ application {
 
 run {
     standardInput = System.in
+}
+
+sourceSets {
+    main {
+        solidity {
+            srcDir {
+                "$projectDir/resources/solidity"
+            }
+        }
+    }
 }

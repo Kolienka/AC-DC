@@ -1,4 +1,4 @@
-package Smart.Contracts.Romain.managers;
+package Smart.Contracts.Romain.generaters;
 
 import java.util.ArrayList;
 

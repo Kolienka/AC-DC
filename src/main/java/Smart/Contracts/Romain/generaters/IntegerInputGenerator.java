@@ -1,12 +1,9 @@
-package Smart.Contracts.Romain.managers;
-
-import jnr.ffi.annotations.In;
+package Smart.Contracts.Romain.generaters;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
-import java.util.ArrayList;
 
-public class IntegerInputGenerator extends NumericalInputGenerator{
+public class IntegerInputGenerator extends NumericalInputGenerator {
 
     public IntegerInputGenerator(){
         super();

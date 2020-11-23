@@ -1,6 +1,4 @@
-package Smart.Contracts.Romain.managers;
-
-import java.util.ArrayList;
+package Smart.Contracts.Romain.generaters;
 
 public abstract class NumericalInputGenerator<T> extends InputGenerator {
 

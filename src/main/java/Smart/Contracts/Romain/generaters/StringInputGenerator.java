@@ -1,7 +1,5 @@
-package Smart.Contracts.Romain.managers;
+package Smart.Contracts.Romain.generaters;
 
-import java.nio.charset.Charset;
-import java.util.ArrayList;
 import java.util.Random;
 
 public class StringInputGenerator extends InputGenerator{
