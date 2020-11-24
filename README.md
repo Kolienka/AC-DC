@@ -20,6 +20,9 @@ Depuis Windows:
 + Récupérer la liste du coût en gas du rang 1 à n d'une fonction d'un contrat 
 `localhost:1234/scripts/:nomDuScript/result/:rang`
 
+## Environement:
+* Gradle 6.6.1
+* 
 
 ## Structure:
 
