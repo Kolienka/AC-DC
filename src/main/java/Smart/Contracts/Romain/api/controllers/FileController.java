@@ -11,7 +11,10 @@ import java.util.HashMap;
 import java.util.Objects;
 
 public class FileController extends Controller{
-
+    /**
+     * Classe permettant de récupérer le nom de chaque script dispnonible
+     * @return Nom de chaque scripts
+     */
     public static String getAvailableScripts(){
         FileService service = new FileService();
         File[] allFileNames;

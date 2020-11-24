@@ -3,6 +3,9 @@ package Smart.Contracts.Romain.generaters;
 import java.util.ArrayList;
 
 public abstract class InputGenerator<T> {
+    /**
+     * Classe mère des générateurs aléatoires, permet de générer soit une fois un type T, soit un tableau de T de taille length
+     */
 
     public InputGenerator(){}
     public abstract T generate();

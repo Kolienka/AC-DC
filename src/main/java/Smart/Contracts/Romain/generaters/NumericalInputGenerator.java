@@ -1,7 +1,9 @@
 package Smart.Contracts.Romain.generaters;
 
 public abstract class NumericalInputGenerator<T> extends InputGenerator {
-
+    /**
+     * Générateur de types numériques, les limites sont modifiables.
+     */
     protected int limMin = 0;
     protected int limMax = 1000000000;
 

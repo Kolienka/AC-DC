@@ -7,6 +7,11 @@ import java.net.URL;
 import java.util.Objects;
 
 public class FileService {
+    /**
+     * Permet de récuperer les scripts disponibles
+     * @return Tableau des fichiers disponibles
+     * @throws URISyntaxException
+     */
     public File[] getAvailableScripts() throws URISyntaxException {
         FilenameFilter filter = (dir, name) -> name.endsWith(".bin");
         URL resource = FileService.class.getClassLoader().getResource("solidity");

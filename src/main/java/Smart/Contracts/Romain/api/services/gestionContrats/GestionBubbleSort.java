@@ -1,11 +1,9 @@
 package Smart.Contracts.Romain.api.services.gestionContrats;
 
-import Smart.Contracts.Romain.api.services.GestionContrats;
 import Smart.Contracts.Romain.generaters.IntegerInputGenerator;
 import org.web3j.bubblesort.Bubblesort;
 import org.web3j.crypto.Credentials;
 import org.web3j.protocol.Web3j;
-import org.web3j.quicksort.QuickSort;
 import org.web3j.tx.gas.DefaultGasProvider;
 
 import java.math.BigInteger;
@@ -37,4 +35,13 @@ public class GestionBubbleSort extends GestionnaireContrat{
         ArrayList<BigInteger> list = new IntegerInputGenerator().generateArray(rang);
         return bubblesort.sort(list).send().getGasUsed();
     }
+
+    public ArrayList<Integer> generateCloud(int rang) throws Exception {
+        ArrayList<Integer> list = new ArrayList<>();
+        for(int i=2; i<rang; i++){
+            list.add(execute(i).intValue());
+        }
+        return list;
+    }
+
 }

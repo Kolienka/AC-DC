@@ -9,6 +9,9 @@ public class Routes {
 
     public static void load(){
 
+    /**
+     * Différentes routes disponibles pour l'API REST
+     */
         redirect.get("/scripts","/scripts/");
 
         path("/scripts", () -> {

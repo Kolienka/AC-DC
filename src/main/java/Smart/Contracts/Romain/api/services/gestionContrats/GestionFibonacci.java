@@ -1,8 +1,5 @@
 package Smart.Contracts.Romain.api.services.gestionContrats;
 
-import Smart.Contracts.Romain.api.services.GestionContrats;
-import Smart.Contracts.Romain.generaters.IntegerInputGenerator;
-import org.web3j.bubblesort.Bubblesort;
 import org.web3j.crypto.Credentials;
 import org.web3j.fibonacci.Fibonacci;
 import org.web3j.protocol.Web3j;
@@ -33,9 +30,17 @@ public class GestionFibonacci extends GestionnaireContrat{
     }
 
     @Override
-    public BigInteger execute(int rang) throws Exception { //WIP
-        BigInteger val = new BigInteger(String.valueOf(rang));
-        //Fibonacci fibo = fibonacci.fibonacci(val).send().getGasUsed();
-        return null;
+    public BigInteger execute(int rang) throws Exception {
+        BigInteger val = BigInteger.valueOf(rang);
+        return fibonacci.fibonacci(val).send().getGasUsed();
     }
+
+    public ArrayList<Integer> generateCloud(int rang) throws Exception {
+        ArrayList<Integer> list = new ArrayList<>();
+        for(int i=2; i<rang; i++){
+            list.add(execute(i).intValue());
+        }
+        return list;
+    }
+
 }

@@ -1,8 +1,6 @@
 package Smart.Contracts.Romain.api.services.gestionContrats;
 
-import Smart.Contracts.Romain.api.services.GestionContrats;
 import Smart.Contracts.Romain.generaters.IntegerInputGenerator;
-import org.web3j.bubblesort.Bubblesort;
 import org.web3j.crypto.Credentials;
 import org.web3j.mergesort.MergeSort;
 import org.web3j.protocol.Web3j;
@@ -35,7 +33,15 @@ public class GestionMergeSort extends GestionnaireContrat{
     @Override
     public BigInteger execute(int rang) throws Exception { //WIP
         ArrayList<BigInteger> list = new IntegerInputGenerator().generateArray(rang);
-        //return mergeSort.sort(list).send().getGasUsed();
-        return null;
+        return mergeSort.sort(list).send().getGasUsed();
     }
+
+    public ArrayList<Integer> generateCloud(int rang) throws Exception {
+        ArrayList<Integer> list = new ArrayList<>();
+        for(int i=2; i<rang; i++){
+            list.add(execute(i).intValue());
+        }
+        return list;
+    }
+
 }

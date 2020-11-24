@@ -4,6 +4,9 @@ import java.util.Random;
 
 public class StringInputGenerator extends InputGenerator{
 
+    /**
+     * Générateur de strings aléatoires
+     */
     private int string_len = 1;
     private static final char[] CHARS_ALLOWED = "abcdefghijklmnopqrstuvwxyz0123456789".toCharArray();
 

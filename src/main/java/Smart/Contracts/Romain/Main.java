@@ -4,16 +4,13 @@
 package Smart.Contracts.Romain;
 
 import Smart.Contracts.Romain.api.routes.Routes;
+import Smart.Contracts.Romain.api.services.gestionContrats.GestionQuickSort;
+import org.web3j.quicksort.QuickSort;
 
 
 import static spark.Spark.*;
 
 public class Main {
-
-    protected static final String ADDRESS = "0x2cf178c0fcf153dd0f40db1af064824a8c6751a5";
-    private static final String password = "Password123";
-    private static final String src = "src/main/resources/demo-wallet.json";
-
 
     public static void main(String[] args) throws Exception {
         new Main();

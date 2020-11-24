@@ -5,6 +5,10 @@ import java.math.BigInteger;
 
 public class IntegerInputGenerator extends NumericalInputGenerator {
 
+    /**
+     * Générateur d'entiers aléatoires
+     */
+
     public IntegerInputGenerator(){
         super();
     }
